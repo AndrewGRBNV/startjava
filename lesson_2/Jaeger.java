@@ -13,17 +13,13 @@ public class Jaeger {
         return true;
     }
 
-    void  move() {
-
-    }
+    void  move() {}
 
     String scanKaiju() {
         return "Yes";
     }
 
-    void useVortexCannon() {
-
-    }
+    void useVortexCannon() {}
 
     public String getModelName() {
         return modelName;

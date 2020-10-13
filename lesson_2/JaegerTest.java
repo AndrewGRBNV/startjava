@@ -12,14 +12,14 @@ public class JaegerTest {
         StrikerEureka.setStrength(10);
         StrikerEureka.setArmor(9);
 
-        StrikerEureka.setModelName("ChernoAlfa");
-        StrikerEureka.setMark("Mark-1");
-        StrikerEureka.setOrigin("Russia");
-        StrikerEureka.setHeight(85.34f);
-        StrikerEureka.setWeight(24.12f);
-        StrikerEureka.setSpeed(3);
-        StrikerEureka.setStrength(10);
-        StrikerEureka.setArmor(10);
+        ChernoAlfa.setModelName("ChernoAlfa");
+        ChernoAlfa.setMark("Mark-1");
+        ChernoAlfa.setOrigin("Russia");
+        ChernoAlfa.setHeight(85.34f);
+        ChernoAlfa.setWeight(24.12f);
+        ChernoAlfa.setSpeed(3);
+        ChernoAlfa.setStrength(10);
+        ChernoAlfa.setArmor(10);
 
 
     }

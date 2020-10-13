@@ -10,7 +10,6 @@ public class Calculator_2 {
         }
         System.out.println("Число введено не корректно, введите число ");
         return inputNumber();
-
     }
 
     public static char inputOperation() {
@@ -88,5 +87,21 @@ public class Calculator_2 {
         } else {
             return num1 % num2;
         }
+    }
+
+    public static boolean inputYesNo() {
+        System.out.println("Хотите продолжить? да / нет");
+        Scanner scan = new Scanner(System.in);
+        if (scan.hasNext()) {
+            switch (scan.next()) {
+                case "да":
+                    return true;
+                case "нет":
+                    return false;
+                default:
+                    return inputYesNo();
+            }
+        }
+        return inputYesNo();
     }
 }
