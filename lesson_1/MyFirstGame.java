@@ -17,7 +17,7 @@ class MyFirstGame {
         int number;
         if (scan.hasNextInt()) {
             number = scan.nextInt();
-            if ((number < 0) | (number > 100)) {
+            if ((number < 0) || (number > 100)) {
                 System.out.println("Число введено не верно, число меньше 0 или число больше 100, введите число заново ");
                 return inputNumber();
             } else {

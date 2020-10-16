@@ -1,15 +1,15 @@
 public class ConditionalStatement {
     public static void main(String[] args) {
         int age = 25;
-        String name = "Inna";
-        String gender = "female";
+        char firstNameLetter = 'I';
+        char gender = 'f';
         float height = 1.70f;
 
         if (age > 20) {
             System.out.println("Возраст больше 20 лет");
         }
 
-        if (gender == "female") {
+        if (gender == 'f') {
             System.out.println("Пол - женский");
         }
 
@@ -19,26 +19,12 @@ public class ConditionalStatement {
             System.out.println("Рост выше 170 см");
         }
 
-        if (name.charAt(0) == 'M') {
+        if (firstNameLetter == 'M') {
             System.out.println("Первая буква имени М");
-        } else if (name.charAt(0) == 'I') {
+        } else if (firstNameLetter == 'I') {
             System.out.println("Первая буква имени I");
-            } else {
+        } else {
             System.out.println("Первая буква имени не M и не I");
         }
     }
 }
-
-//    ЕСЛИ(рост < 1.80) {
-//        сообщение
-//    } ИНАЧЕ {
-//    сообщение
-//}
-//
-//    ЕСЛИ(перваяБукваИмени == ‘M’) {
-//        сообщение
-//    } ИНАЧЕ ЕСЛИ(перваяБукваИмени == ‘I’) {
-//    сообщение
-//} ИНАЧЕ {
-//    сообщение
-//}

@@ -5,7 +5,7 @@ class Calculator {
         double num1 = inputNumber();
         char operation = inputOperation();
         double num2 = inputNumber();
-        double result = calculation(num1, num2, operation);
+        double result = calculate(num1, num2, operation);
         System.out.println("Результат равен " + result);
     }
 
@@ -17,7 +17,6 @@ class Calculator {
         }
         System.out.println("Число введено не корректно, введите число ");
         return inputNumber();
-
     }
 
     private static char inputOperation() {
@@ -35,14 +34,12 @@ class Calculator {
             if (operation == '+' || operation == '-' || operation == '*' || operation == '/' || operation == '^' || operation == '%') {
                 return operation;
             }
-            System.out.println("Вы ввели не правильную операцию, введите заново");
-            return inputOperation();
         }
         System.out.println("Вы ввели не правильную операцию, введите ");
         return inputOperation();
     }
 
-    private static double calculation(double num1, double num2, char operation) {
+    private static double calculate(double num1, double num2, char operation) {
         if (operation == '+') {
             return add(num1, num2);
         } else if (operation == '-') {
