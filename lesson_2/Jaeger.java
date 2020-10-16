@@ -1,13 +1,13 @@
 public class Jaeger {
 
-    private String modelName;// = "Bracer Phoenix";
-    private String mark;// = "Mark-5";
-    private String origin;// = "USA";
-    private float height;// = 70.7f;
-    private float weight;// = 2.1f;
-    private int speed;// = 3;
-    private int strength;// = 8;
-    private int armor;// = 9;
+    private String modelName;
+    private String mark;
+    private String origin;
+    private float height;
+    private float weight;
+    private int speed;
+    private int strength;
+    private int armor;
 
     boolean drift() {
         return true;
@@ -21,7 +21,8 @@ public class Jaeger {
 
     void useVortexCannon() {}
 
-    public String getModelName() {
+//сделано с помощью геттеров
+        public String getModelName() {
         return modelName;
     }
 
@@ -84,4 +85,17 @@ public class Jaeger {
     public void setArmor(int armor) {
         this.armor = armor;
     }
+
+    //сделано с помощью конструктора
+//    public Jaeger(String modelName, String mark, String origin, float height, float weight, int speed, int strength, int armor) {
+//        this.modelName = modelName;
+//        this.mark = mark;
+//        this.origin = origin;
+//        this.height = height;
+//        this.weight = weight;
+//        this.speed = speed;
+//        this.strength = strength;
+//        this.armor = armor;
+//    }
+
 }

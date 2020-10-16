@@ -1,5 +1,6 @@
 public class JaegerTest {
     public static void main(String[] args) {
+        //сделано с помощью геттеров
         Jaeger StrikerEureka = new Jaeger();
         Jaeger ChernoAlfa = new Jaeger();
 
@@ -20,6 +21,11 @@ public class JaegerTest {
         ChernoAlfa.setSpeed(3);
         ChernoAlfa.setStrength(10);
         ChernoAlfa.setArmor(10);
+
+        //сделано с помощью конструктора
+//        Jaeger StrikerEureka = new Jaeger("Striker Eureka", "Mark-5", "Australia", 76.2f, 1.850f, 10,10,9 );
+//        Jaeger ChernoAlfa = new Jaeger("ChernoAlfa", "Mark-1", "Russia", 85.34f,24.12f,3,10,10 );
+
 
 
     }
