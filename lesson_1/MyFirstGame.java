@@ -31,7 +31,6 @@ class MyFirstGame {
 
     private static boolean testNumber(int unknownNumber, int inputNumber) {
         if (unknownNumber == inputNumber) {
-            System.out.println("Введённое Вами число больше загаданного");
             return true;
         } else {
             if (unknownNumber < inputNumber) {
