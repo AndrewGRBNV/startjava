@@ -1,26 +1,4 @@
 public class Jaeger {
-
-    private String modelName;
-    private String mark;
-    private String origin;
-    private float height;
-    private float weight;
-    private int speed;
-    private int strength;
-    private int armor;
-
-    boolean drift() {
-        return true;
-    }
-
-    void  move() {}
-
-    String scanKaiju() {
-        return "Yes";
-    }
-
-    void useVortexCannon() {}
-
 //сделано с помощью геттеров
         public String getModelName() {
         return modelName;
@@ -85,6 +63,27 @@ public class Jaeger {
     public void setArmor(int armor) {
         this.armor = armor;
     }
+
+    private String modelName;
+    private String mark;
+    private String origin;
+    private float height;
+    private float weight;
+    private int speed;
+    private int strength;
+    private int armor;
+
+    boolean drift() {
+        return true;
+    }
+
+    void  move() {}
+
+    String scanKaiju() {
+        return "Yes";
+    }
+
+    void useVortexCannon() {}
 
     //сделано с помощью конструктора
 //    public Jaeger(String modelName, String mark, String origin, float height, float weight, int speed, int strength, int armor) {

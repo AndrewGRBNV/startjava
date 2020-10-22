@@ -1,28 +1,4 @@
 public class Wolf {
-    private String gender;
-    private String name;
-    private int weight;
-    private int age;
-    private String color;
-
-    public void go() {
-        System.out.print("Going...\n");
-    }
-
-    public void sit() {
-        System.out.print("Siting...\n"); }
-
-    public void  run() {
-        System.out.print("Run...\n");
-    }
-
-    public void talk() {
-        System.out.print("Talking...\n");
-    }
-
-    public void  hunt() {
-        System.out.print("Hunting...\n");
-    }
 
     public String getGender() {
         return gender;
@@ -66,5 +42,30 @@ public class Wolf {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    private String gender;
+    private String name;
+    private int weight;
+    private int age;
+    private String color;
+
+    public void go() {
+        System.out.print("Going...\n");
+    }
+
+    public void sit() {
+        System.out.print("Siting...\n"); }
+
+    public void  run() {
+        System.out.print("Run...\n");
+    }
+
+    public void talk() {
+        System.out.print("Talking...\n");
+    }
+
+    public void  hunt() {
+        System.out.print("Hunting...\n");
     }
 }

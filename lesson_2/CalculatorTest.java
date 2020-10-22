@@ -1,6 +1,9 @@
+import java.util.Scanner;
+
 public class CalculatorTest {
     public static void main(String[] args) {
         boolean runCalculator = true;
+
         do {
             double num1 = Calculator_2.inputNumber();
             char operation = Calculator_2.inputOperation();

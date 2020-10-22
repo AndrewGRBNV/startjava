@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Calculator_2 {
 
-    public static double inputNumber() {
+    public double inputNumber() {
         System.out.print("Введите число ");
         Scanner scan = new Scanner(System.in);
         if (scan.hasNextDouble()) {
@@ -12,7 +12,7 @@ public class Calculator_2 {
         return inputNumber();
     }
 
-    public static char inputOperation() {
+    public char inputOperation() {
         System.out.println("Введите действие:");
         System.out.println("+ Сложение");
         System.out.println("- Вычитание ");
@@ -34,7 +34,7 @@ public class Calculator_2 {
         return inputOperation();
     }
 
-    public static double calculation(double num1, double num2, char operation) {
+    public double calculation(double num1, double num2, char operation) {
         switch (operation) {
             case '+': return add(num1, num2);
             case '-': return sub(num1, num2);
@@ -45,19 +45,19 @@ public class Calculator_2 {
         }
     }
 
-    public static double add(double num1, double num2) {
+    public double add(double num1, double num2) {
         return num1 + num2;
     }
 
-    public static double sub(double num1, double num2) {
+    public double sub(double num1, double num2) {
         return num1 - num2;
     }
 
-    public static double mul(double num1, double num2) {
+    public double mul(double num1, double num2) {
         return num1 * num2;
     }
 
-    public static double div(double num1, double num2) {
+    public double div(double num1, double num2) {
         if (num2 == 0) {
             System.out.println("На 0 делить нельзя");
             return Double.NaN;
@@ -66,7 +66,7 @@ public class Calculator_2 {
         }
     }
 
-    public static double power(double num1, double num2) {
+    public double power(double num1, double num2) {
         if (num2 == (int)num2 && 0 < num2) {  // введённое число натуральное
             int pow = 0;
             double result = 1;
@@ -80,7 +80,7 @@ public class Calculator_2 {
         }
     }
 
-    public static double rem(double num1, double num2) {
+    public double rem(double num1, double num2) {
         if (num2 == 0) {
             System.out.println("На 0 делить нельзя");
             return Double.NaN;
@@ -89,7 +89,7 @@ public class Calculator_2 {
         }
     }
 
-    public static boolean inputYesNo() {
+    public boolean inputYesNo() {
         System.out.println("Хотите продолжить? да / нет");
         Scanner scan = new Scanner(System.in);
         if (scan.hasNext()) {
