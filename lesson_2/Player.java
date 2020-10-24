@@ -1,23 +1,23 @@
 public class Player {
 
-    private String Name;
+    private String name;
     private int number;
 
-    public Player(String Name, int number) {
-        this.Name = Name;
+    public Player(String name) {
+        this.name = name;
         this.number = number;
     }
 
-    public Player() {
-
-    }
+//    public Player() {
+//
+//    }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        name = name;
     }
 
     public int getNumber() {

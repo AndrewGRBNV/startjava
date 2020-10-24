@@ -3,20 +3,10 @@ import java.util.Scanner;
 
 class GuessNumber {
 
-    public Player inputPlayer_0() {
-        System.out.println("Введите имя первого игрока");
-        Player player_0 = new Player();
+    public String playerName (char number) {
+        System.out.println("Введите имя игрока " + number);
         Scanner scan = new Scanner(System.in);
-        player_0.setName(scan.next());
-        return  player_0;
-    }
-
-    public Player inputPlayer_1() {
-        System.out.println("Введите имя второго игрока");
-        Player player_1 = new Player();
-        Scanner scan = new Scanner(System.in);
-        player_1.setName(scan.next());
-        return  player_1;
+        return  (scan.next());
     }
 
     public int guessRandom() {
@@ -57,8 +47,8 @@ class GuessNumber {
 
     public boolean testPlayer(Player player, int unknownNumber) {
         System.out.println("Игрок " + player.getName() + " введите число");
-        player.setNumber(GuessNumber.inputNumber());
-        if (GuessNumber.testNumber(unknownNumber, player.getNumber())) {
+        player.setNumber(inputNumber());
+        if (testNumber(unknownNumber, player.getNumber())) {
             System.out.println("Вы угадали число");
             return true;
         }

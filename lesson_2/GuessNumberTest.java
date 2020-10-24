@@ -1,20 +1,22 @@
 class GuessNumberTest {
 
-    public void main(String[] args) {
+    public static void main(String[] args) {
         boolean runGuessNumberTest = true;
         while (runGuessNumberTest) {
-            Player player_0 = inputPlayer_0();
-            Player player_1 = GuessNumber.inputPlayer_1();
-            int unknownNumber = GuessNumber.guessRandom();
+            String name = "firt";
+            GuessNumber player = new GuessNumber();
+            Player player_0 = new Player(player.playerName('1'));
+            Player player_1 = new Player(player.playerName('2'));
+            int unknownNumber = player.guessRandom();
             while (true) {
-                if (GuessNumber.testPlayer(player_0, unknownNumber)){
+                if (player.testPlayer(player_0, unknownNumber)){
                     break;
                 }
-                if (GuessNumber.testPlayer(player_1, unknownNumber)){
+                if (player.testPlayer(player_1, unknownNumber)){
                     break;
                 }
             }
-            runGuessNumberTest = inputYesNo();
+            runGuessNumberTest = player.inputYesNo();
         } while (runGuessNumberTest);
     }
 }

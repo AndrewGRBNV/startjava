@@ -71,7 +71,7 @@ public class Calculator_2 {
             int pow = 0;
             double result = 1;
             for (pow = 0; pow < num2; pow++) {
-                result *= num1;
+                result *= num1; 
             }
             return result;
         } else {

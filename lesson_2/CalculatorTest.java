@@ -1,16 +1,14 @@
-import java.util.Scanner;
-
 public class CalculatorTest {
     public static void main(String[] args) {
         boolean runCalculator = true;
-
+        Calculator_2 calc = new Calculator_2();
         do {
-            double num1 = Calculator_2.inputNumber();
-            char operation = Calculator_2.inputOperation();
-            double num2 = Calculator_2.inputNumber();
-            double result = Calculator_2.calculation(num1, num2, operation);
+            double num1 = calc.inputNumber();
+            char operation = calc.inputOperation();
+            double num2 = calc.inputNumber();
+            double result = calc.calculation(num1, num2, operation);
             System.out.println("Результат равен " + result);
-            runCalculator = Calculator_2.inputYesNo();
+            runCalculator = calc.inputYesNo();
         } while (runCalculator);
     }
 }
