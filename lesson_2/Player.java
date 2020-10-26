@@ -5,12 +5,7 @@ public class Player {
 
     public Player(String name) {
         this.name = name;
-        this.number = number;
     }
-
-//    public Player() {
-//
-//    }
 
     public String getName() {
         return name;

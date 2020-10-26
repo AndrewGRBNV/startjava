@@ -70,4 +70,16 @@ class GuessNumber {
         }
         return inputYesNo();
     }
+
+    public void runGame(Player player_0,Player player_1) {
+        int unknownNumber = guessRandom();
+        while (true) {
+            if (testPlayer(player_0, unknownNumber)){
+                break;
+            }
+            if (testPlayer(player_1, unknownNumber)){
+                break;
+            }
+        }
+    }
 }

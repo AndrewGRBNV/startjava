@@ -104,4 +104,13 @@ public class Calculator_2 {
         }
         return inputYesNo();
     }
+
+    public double runCalculator() {
+        double num1 = inputNumber();
+        char operation = inputOperation();
+        double num2 = inputNumber();
+        double result = calculation(num1, num2, operation);
+        return result;
+    }
+
 }
