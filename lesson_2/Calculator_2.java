@@ -1,40 +1,6 @@
-import java.util.Scanner;
-
 public class Calculator_2 {
 
-    public double inputNumber() {
-        System.out.print("Введите число ");
-        Scanner scan = new Scanner(System.in);
-        if (scan.hasNextDouble()) {
-            return scan.nextDouble();
-        }
-        System.out.println("Число введено не корректно, введите число ");
-        return inputNumber();
-    }
-
-    public char inputOperation() {
-        System.out.println("Введите действие:");
-        System.out.println("+ Сложение");
-        System.out.println("- Вычитание ");
-        System.out.println("* Умножение ");
-        System.out.println("/ Деление");
-        System.out.println("^ Возведение в степень");
-        System.out.println("% Остаток от деления");
-        Scanner scan = new Scanner(System.in);
-        char operation;
-        if (scan.hasNext()) {
-            operation = scan.next().charAt(0);
-            if (operation == '+' || operation == '-' || operation == '*' || operation == '/' || operation == '^' || operation == '%') {
-                return operation;
-            }
-            System.out.println("Вы ввели не правильную операцию, введите заново");
-            return inputOperation();
-        }
-        System.out.println("Вы ввели не правильную операцию, введите ");
-        return inputOperation();
-    }
-
-    public double calculation(double num1, double num2, char operation) {
+    private double calculate(double num1, double num2, char operation) {
         switch (operation) {
             case '+': return add(num1, num2);
             case '-': return sub(num1, num2);
@@ -45,19 +11,19 @@ public class Calculator_2 {
         }
     }
 
-    public double add(double num1, double num2) {
+    private double add(double num1, double num2) {
         return num1 + num2;
     }
 
-    public double sub(double num1, double num2) {
+    private double sub(double num1, double num2) {
         return num1 - num2;
     }
 
-    public double mul(double num1, double num2) {
+    private double mul(double num1, double num2) {
         return num1 * num2;
     }
 
-    public double div(double num1, double num2) {
+    private double div(double num1, double num2) {
         if (num2 == 0) {
             System.out.println("На 0 делить нельзя");
             return Double.NaN;
@@ -66,7 +32,7 @@ public class Calculator_2 {
         }
     }
 
-    public double power(double num1, double num2) {
+    private double power(double num1, double num2) {
         if (num2 == (int)num2 && 0 < num2) {  // введённое число натуральное
             int pow = 0;
             double result = 1;
@@ -80,7 +46,7 @@ public class Calculator_2 {
         }
     }
 
-    public double rem(double num1, double num2) {
+    private double rem(double num1, double num2) {
         if (num2 == 0) {
             System.out.println("На 0 делить нельзя");
             return Double.NaN;
@@ -89,27 +55,11 @@ public class Calculator_2 {
         }
     }
 
-    public boolean inputYesNo() {
-        System.out.println("Хотите продолжить? да / нет");
-        Scanner scan = new Scanner(System.in);
-        if (scan.hasNext()) {
-            switch (scan.next()) {
-                case "да":
-                    return true;
-                case "нет":
-                    return false;
-                default:
-                    return inputYesNo();
-            }
-        }
-        return inputYesNo();
-    }
-
     public double runCalculator() {
-        double num1 = inputNumber();
-        char operation = inputOperation();
-        double num2 = inputNumber();
-        double result = calculation(num1, num2, operation);
+        double num1 = CalculatorTest.inputNumber();
+        char operation = CalculatorTest.inputOperation();
+        double num2 = CalculatorTest.inputNumber();
+        double result = calculate(num1, num2, operation);
         return result;
     }
 

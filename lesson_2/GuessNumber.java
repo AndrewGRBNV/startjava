@@ -9,13 +9,13 @@ class GuessNumber {
         return  (scan.next());
     }
 
-    public int guessRandom() {
+    private int guessRandom() {
         System.out.println("Компьютер загадал число от 0 до 100, Вам нужно его отгадать");
         Random random = new Random();
         return random.nextInt(100);
     }
 
-    public int inputNumber() {
+    private int inputNumber() {
         Scanner scan = new Scanner(System.in);
         int number;
         if (scan.hasNextInt()) {
@@ -32,20 +32,18 @@ class GuessNumber {
         }
     }
 
-    public boolean testNumber(int unknownNumber, int inputNumber) {
+    private boolean testNumber(int unknownNumber, int inputNumber) {
         if (unknownNumber == inputNumber) {
             return true;
+        } else if (unknownNumber < inputNumber) {
+               System.out.println("Введённое Вами число больше загаданного");
         } else {
-            if (unknownNumber < inputNumber) {
-                System.out.println("Введённое Вами число больше загаданного");
-            } else {
-                System.out.println("Введённое Вами число меньше загаданного");
-            }
-            return false;
+               System.out.println("Введённое Вами число меньше загаданного");
         }
+            return false;
     }
 
-    public boolean testPlayer(Player player, int unknownNumber) {
+    private boolean makeMove(Player player, int unknownNumber) {
         System.out.println("Игрок " + player.getName() + " введите число");
         player.setNumber(inputNumber());
         if (testNumber(unknownNumber, player.getNumber())) {
@@ -55,29 +53,13 @@ class GuessNumber {
         return false;
     }
 
-    public boolean inputYesNo() {
-        System.out.println("Хотите продолжить? да / нет");
-        Scanner scan = new Scanner(System.in);
-        if (scan.hasNext()) {
-            switch (scan.next()) {
-                case "да":
-                    return true;
-                case "нет":
-                    return false;
-                default:
-                    return inputYesNo();
-            }
-        }
-        return inputYesNo();
-    }
-
     public void runGame(Player player_0,Player player_1) {
         int unknownNumber = guessRandom();
         while (true) {
-            if (testPlayer(player_0, unknownNumber)){
+            if (makeMove(player_0, unknownNumber)){
                 break;
             }
-            if (testPlayer(player_1, unknownNumber)){
+            if (makeMove(player_1, unknownNumber)){
                 break;
             }
         }
