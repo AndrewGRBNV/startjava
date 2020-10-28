@@ -3,12 +3,6 @@ import java.util.Scanner;
 
 class GuessNumber {
 
-    public String playerName (char number) {
-        System.out.println("Введите имя игрока " + number);
-        Scanner scan = new Scanner(System.in);
-        return  (scan.next());
-    }
-
     private int guessRandom() {
         System.out.println("Компьютер загадал число от 0 до 100, Вам нужно его отгадать");
         Random random = new Random();
@@ -43,16 +37,6 @@ class GuessNumber {
             return false;
     }
 
-    private boolean makeMove(Player player, int unknownNumber) {
-        System.out.println("Игрок " + player.getName() + " введите число");
-        player.setNumber(inputNumber());
-        if (testNumber(unknownNumber, player.getNumber())) {
-            System.out.println("Вы угадали число");
-            return true;
-        }
-        return false;
-    }
-
     public void runGame(Player player_0,Player player_1) {
         int unknownNumber = guessRandom();
         while (true) {
@@ -63,5 +47,15 @@ class GuessNumber {
                 break;
             }
         }
+    }
+
+    private boolean makeMove(Player player, int unknownNumber) {
+        System.out.println("Игрок " + player.getName() + " введите число");
+        player.setNumber(inputNumber());
+        if (testNumber(unknownNumber, player.getNumber())) {
+            System.out.println("Вы угадали число");
+            return true;
+        }
+        return false;
     }
 }

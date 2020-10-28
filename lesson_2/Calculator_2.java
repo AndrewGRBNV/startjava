@@ -1,26 +1,14 @@
 public class Calculator_2 {
 
-    private double calculate(double num1, double num2, char operation) {
+    public double calculate(double num1, double num2, char operation) {
         switch (operation) {
-            case '+': return add(num1, num2);
-            case '-': return sub(num1, num2);
-            case '*': return mul(num1, num2);
+            case '+': return num1 + num2;
+            case '-': return num1 - num2;
+            case '*': return num1 * num2;
             case '/': return div(num1, num2);
             case '^': return power(num1, num2);
             default: return rem(num1, num2);
         }
-    }
-
-    private double add(double num1, double num2) {
-        return num1 + num2;
-    }
-
-    private double sub(double num1, double num2) {
-        return num1 - num2;
-    }
-
-    private double mul(double num1, double num2) {
-        return num1 * num2;
     }
 
     private double div(double num1, double num2) {
@@ -54,13 +42,4 @@ public class Calculator_2 {
             return num1 % num2;
         }
     }
-
-    public double runCalculator() {
-        double num1 = CalculatorTest.inputNumber();
-        char operation = CalculatorTest.inputOperation();
-        double num2 = CalculatorTest.inputNumber();
-        double result = calculate(num1, num2, operation);
-        return result;
-    }
-
 }
